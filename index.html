@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <a target="_blank" href="https://www.google.com/flights?q=flight&authuser=0&source=lnms&impression_in_search=true&mode_promoted=true&tbm=flm&sa=X&ved=0ahUKEwjrmKLDiOfjAhUG26wKHQ7vA78Q_AUIESgB#flt=MEX..2019-08-19*.MEX.2019-08-23;c:MXN;e:1;sd:1;t:h">
+        <img src="./assets/images/images.png" alt="Bedu Flights Logo">
+        <span>Bedu Flights</span>
+      </a>
+
+      <ul id="desktopMenu">
+        <li><a href="">Conocenos</a></li>
+        <li><a href="">Quienes somos</a></li>
+        <li><a href="">Promociones</a></li>
+        <li><a href="">Donde ir</a></li>
+      </ul>
+      <div class="drawer">
+        <button id="mobileButton">
+          <img id="menu" src="./assets/images/three.png" alt="Menu">
+        </button>
+        <ul id="mobileMenu">
+          <li><a href="">Conocenos</a></li>
+          <li><a href="">Quienes somos</a></li>
+          <li><a href="">Promociones</a></li>
+          <li><a href="">Donde ir</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <section>
+    <p class="first">Busca algun lugar para pasear XD</p>
+    <p class="second">Compra ya !!!! no te hagas wey !!!!</p>
+    <div>
+      <input id="finder" placeholder="BUSCAR VUELOS" type="text">
+      <button onclick="_findFlights()">
+        <img class="look" src="./assets/images/look.png">
+      </button>
+    </div>
+  </section>
+  <footer>
+    <p>Algo va aquí</p>
+  </footer>
+  <div class="modal">
+    <div class="system">
+      <div class="sun"></div>
+      <div class="ear-path"></div>
+      <div class="ear"><div class="lune"></div></div>
+    </div>
+  </div>
+</body>
+<script>
+  function _findFlights() {
+    const modal = document.querySelector('.modal');
+    modal.classList.add('show');
+    setTimeout(() => {
+      modal.classList.remove('show');
+      window.location.href = 'https://www.google.com/flights?q=flight&authuser=0&source=lnms&impression_in_search=true&mode_promoted=true&tbm=flm&sa=X&ved=0ahUKEwjrmKLDiOfjAhUG26wKHQ7vA78Q_AUIESgB#flt=MEX..2019-08-19*.MEX.2019-08-23;c:MXN;e:1;sd:1;t:h';
+    }, 4000);
+  }
+
+  function _showMenu() {
+    const menu = document.querySelector('#mobileMenu');
+    menu.classList.add('showMobileMenu');
+    setTimeout(() => {
+      menu.classList.remove('showMobileMenu');
+    }, 4000);
+  }
+</script>
+</html>
