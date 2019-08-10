@@ -116,16 +116,59 @@ section > div > button > img {
     width: 2rem;
     border: none;
 }
+.title {
+    height: 5rem;
+    color: white;
+    background: #683192;
+}
+
+.destinies {
+    height: auto;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(3, 30vw);
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: center;
+    background: #683192;
+    padding: 1rem 0;
+    color: white;
+}
+
+.destinies .div {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+.destinies .div:hover {
+    cursor: pointer;
+}
+.destinies .div span {
+    color: black;
+    font-size: 1rem;
+}
+
+.destinies div:hover img {
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
+
+.destinies div span {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
 
 footer {
     height: 20vh;
     width: 100%;
-    background-color: black;
-    color: white;
-    font-size: 3rem;
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
     align-items: center;
+    background-color: #f6f6f6;
+    color: black;
+    font-size: 3rem;
 }
 
 .modal {
@@ -238,6 +281,13 @@ button:focus  {
     justify-content: flex-end;
     padding-right: 5rem;
 }
+
+@media screen and (max-width: 700px) {
+    .destinies {
+        grid-template-columns: repeat(2, 40%);
+    }
+}
+
 @media screen and (max-width: 600px) {
     #desktopMenu {
         display: none;
@@ -250,6 +300,12 @@ button:focus  {
     }
     header > nav > a {
         width: 50%;
+    }
+    .destinies {
+        grid-template-columns: repeat(1, 90%);
+    }
+    .destinies div span {
+        transform: rotate(270deg);
     }
 }
 
@@ -295,3 +351,7 @@ span {
     75% {  color: rgba(51, 153, 102, 0.95); }
     100% {  color: rgba(104, 49, 146, 0.95); }
 }
+
+/*CSS CLASE 2*/
+
+
