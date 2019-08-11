@@ -10,6 +10,9 @@
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
+<div class="body">
+
+
   <header>
     <nav>
       <a target="_blank" href="https://www.google.com/flights?q=flight&authuser=0&source=lnms&impression_in_search=true&mode_promoted=true&tbm=flm&sa=X&ved=0ahUKEwjrmKLDiOfjAhUG26wKHQ7vA78Q_AUIESgB#flt=MEX..2019-08-19*.MEX.2019-08-23;c:MXN;e:1;sd:1;t:h">
@@ -99,7 +102,46 @@
       <div class="ear"><div class="lune"></div></div>
     </div>
   </div>
+</div>
+  <section id="splash">
+    <div id="result"></div>
+    <div id="loader">
+      <div id="line"></div>
+    </div>
+  </section>
 </body>
+<script src="./node_modules/animejs/lib/anime.min.js"></script>
+<script>
+  const animation = anime({
+    targets: '#line',
+    keyframes: [
+      {width: '10%'},
+      {width: '20%'},
+      {width: '30%'},
+      {width: '40%'},
+      {width: '50%'},
+      {width: '60%'},
+      {width: '70%'},
+      {width: '80%'},
+      {width: '90%'},
+      {width: '100%'}
+    ],
+    duration: 2000,
+    easing: 'linear',
+    loop: false,
+    begin: anim => {
+      document.querySelector('.body').style.display = 'none';
+    },
+    update: anim => {
+      document.querySelector('#result').innerText = Math.round(anim.progress)+'%';
+    },
+    complete: anim => {
+      document.querySelector('#splash').style.display = 'none';
+      document.querySelector('.body').style.display = 'block';
+    }
+  });
+
+</script>
 <script>
   function _findFlights() {
     const modal = document.querySelector('.modal');

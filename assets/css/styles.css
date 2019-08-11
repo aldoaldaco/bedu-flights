@@ -1,14 +1,70 @@
 * {
     margin: 0;
 }
+
 html {
     font-size: 12px;
     font-family: sans-serif;
 }
+
+#splash {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background: black;
+}
+
+#loader {
+    margin: 0;
+    padding: 0;
+    width: 90%;
+    height: 2px;
+    background: lightgrey;
+}
+
+#line {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #683192;
+    /*animation: fill 2s linear;*/
+}
+
+#result {
+    display: inline;
+    vertical-align: center;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+    background: black;
+    color: white;
+}
+
+@-webkit-keyframes fill {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes fill {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
 header {
     width: 100%;
     background-color: black;
 }
+
 header > nav {
     display: flex;
     justify-content: space-evenly;
@@ -166,9 +222,13 @@ footer {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    background-color: #f6f6f6;
-    color: black;
+    background-color: black;
+    color: white;
     font-size: 3rem;
+}
+
+i {
+    fill: white;
 }
 
 .modal {
